@@ -50,7 +50,11 @@ class XmlActivity : AppCompatActivity() {
 //                threeDSecureCustomerInfo = ThreeDSecureCustomerInfo(),
 //                threeDSecurePaymentInfo = ThreeDSecurePaymentInfo()
 //            )
-//            additionalFields = EcmpAdditionalFields()
+
+//            additionalFields {
+//                field{EcmpAdditionalField(EcmpAdditionalFieldType.CUSTOMER_EMAIL, "mail@mail.ru")}
+//                field {EcmpAdditionalField(EcmpAdditionalFieldType.CUSTOMER_FIRST_NAME, "firstName")}
+//            }
         }
         //4. Create sdk object
         val sdk = EcmpPaymentSDK(

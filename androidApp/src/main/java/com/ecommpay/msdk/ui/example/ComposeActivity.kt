@@ -19,9 +19,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import com.ecommpay.msdk.ui.EcmpPaymentInfo
-import com.ecommpay.msdk.ui.EcmpPaymentSDK
-import com.ecommpay.msdk.ui.paymentOptions
+import com.ecommpay.msdk.ui.*
 import com.ecommpay.msdk.ui.example.utils.CommonUtils
 import com.ecommpay.msdk.ui.example.utils.SignatureGenerator
 
@@ -73,13 +71,26 @@ class ComposeActivity : ComponentActivity() {
             isTestEnvironment = true
             merchantId = BuildConfig.GPAY_MERCHANT_ID
             merchantName = "Example Merchant Name"
+//            additionalFields {
+//                field {
+//                    EcmpAdditionalField(
+//                        EcmpAdditionalFieldType.CUSTOMER_EMAIL,
+//                        "mail@mail.com"
+//                    )
+//                }
+//                field {
+//                    EcmpAdditionalField(
+//                        EcmpAdditionalFieldType.CUSTOMER_FIRST_NAME,
+//                        "firstName"
+//                    )
+//                }
+//            }
 //            recurrentData = EcmpRecurrentData()
 //            recipientInfo = RecipientInfo()
 //            threeDSecureInfo = ThreeDSecureInfo(
 //                threeDSecureCustomerInfo = ThreeDSecureCustomerInfo(),
 //                threeDSecurePaymentInfo = ThreeDSecurePaymentInfo()
 //            )
-//            additionalFields = EcmpAdditionalFields()
         }
         //4. Create sdk object
         val sdk = EcmpPaymentSDK(
