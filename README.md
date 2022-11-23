@@ -1,3 +1,4 @@
+[![Download](https://maven-badges.herokuapp.com/maven-central/com.ecommpay/msdk-ui/badge.svg) ](https://maven-badges.herokuapp.com/maven-central/com.ecommpay/msdk-ui/badge.svg)
 # Quickstart
 
 **How to use example project**
