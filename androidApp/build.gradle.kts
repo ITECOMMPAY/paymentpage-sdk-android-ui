@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     kotlin("android")
+    id("org.jetbrains.kotlin.plugin.serialization")
 }
 
 val projectId = "123"
@@ -8,11 +9,11 @@ val projectSecretKey = "321"
 val gPayMerchantId = "BCR2DN6TZ75OBLTH"
 
 android {
-    compileSdk = 32
+    compileSdk = 33
     defaultConfig {
         applicationId = "com.ecommpay.msdk.ui.example"
         minSdk = 21
-        targetSdk = 32
+        targetSdk = 33
         versionCode = 1
         versionName = "1.0"
     }
@@ -59,16 +60,18 @@ android {
 }
 
 dependencies {
-    implementation("com.ecommpay:msdk-ui:2.0.0")
+    implementation("com.ecommpay:msdk-ui:2.1.0")
 
-    implementation("androidx.compose.ui:ui:1.1.1")
-    implementation("androidx.compose.material:material:1.1.1")
-    implementation("androidx.activity:activity-compose:1.5.1")
-
-    implementation("com.google.android.material:material:1.6.1")
-    implementation("androidx.appcompat:appcompat:1.5.0")
+    //Compose
+    implementation("androidx.compose.ui:ui:1.3.2")
+    implementation("androidx.compose.material:material:1.3.1")
+    implementation("androidx.activity:activity-compose:1.6.1")
+    implementation("com.google.android.material:material:1.7.0")
+    //Android
+    implementation("androidx.appcompat:appcompat:1.5.1")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-
-    implementation("androidx.activity:activity-ktx:1.5.1")
-    implementation("androidx.core:core-ktx:1.8.0")
+    implementation("androidx.activity:activity-ktx:1.6.1")
+    implementation("androidx.core:core-ktx:1.9.0")
+    //Additional
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.3")
 }
