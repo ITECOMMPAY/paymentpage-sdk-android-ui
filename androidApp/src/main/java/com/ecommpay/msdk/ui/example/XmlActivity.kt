@@ -6,9 +6,11 @@ import android.util.Log
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
-import com.ecommpay.msdk.ui.*
+import com.ecommpay.msdk.ui.EcmpPaymentInfo
+import com.ecommpay.msdk.ui.EcmpPaymentSDK
 import com.ecommpay.msdk.ui.example.utils.CommonUtils
 import com.ecommpay.msdk.ui.example.utils.SignatureGenerator
+import com.ecommpay.msdk.ui.paymentOptions
 import com.paymentpage.msdk.core.domain.entities.payment.Payment
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
@@ -51,16 +53,12 @@ class XmlActivity : AppCompatActivity() {
             merchantName = "Example Merchant Name"
 //            additionalFields {
 //                field {
-//                    EcmpAdditionalField(
-//                        EcmpAdditionalFieldType.CUSTOMER_EMAIL,
-//                        "mail@mail.com"
-//                    )
+//                    type = EcmpAdditionalFieldType.CUSTOMER_EMAIL,
+//                    value = "mail@mail.com"
 //                }
 //                field {
-//                    EcmpAdditionalField(
-//                        EcmpAdditionalFieldType.CUSTOMER_FIRST_NAME,
-//                        "firstName"
-//                    )
+//                    EcmpAdditionalFieldType.CUSTOMER_FIRST_NAME,
+//                    "firstName"
 //                }
 //            }
 //            recurrentData = EcmpRecurrentData()
