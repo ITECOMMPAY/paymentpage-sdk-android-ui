@@ -5,7 +5,7 @@ plugins {
 }
 
 val projectId = "123"
-val projectSecretKey = "321"
+val projectSecretKey = "123"
 val gPayMerchantId = "BCR2DN6TZ75OBLTH"
 
 android {
@@ -60,7 +60,7 @@ android {
 }
 
 dependencies {
-    implementation("com.ecommpay:msdk-ui:2.1.0")
+    implementation("com.ecommpay:msdk-ui:2.1.1")
 
     //Compose
     implementation("androidx.compose.ui:ui:1.3.2")
